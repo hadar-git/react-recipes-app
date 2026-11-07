@@ -11,6 +11,9 @@ export default function App() {
         <Route index element={<Home />} />
         {/* ↓ כאן כל אחת מוסיפה את ה־Route שלה ↓ */}
         <Route path="*" element={<NotFound />} />
+        import RecipesCarousel from "./RecipesCarousel/RecipesCarousel";
+// ...
+<RecipesCarousel />
       </Route>
     </Routes>
   );
