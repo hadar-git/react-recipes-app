@@ -26,6 +26,13 @@ export default function RecipesCarousel() {
     loadImages();
   }, []);
 
-  console.log(images);
-  return <div>RecipesCarousel</div>;
+  if (loading) {
+    return <div className="message-carousel">טוען...</div>;
+  }
+
+  if (error) {
+    return <div className="error message-carousel">{error}</div>;
+  }
+
+  return <div>{images.length} תמונות נטענו</div>;
 }
