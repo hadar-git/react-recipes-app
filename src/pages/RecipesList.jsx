@@ -13,7 +13,6 @@ useEffect(() => {
     })
     .then((data) =>{
         setRecipes(data.recipes)
-        console.log(data)
     } )
     
     .catch((err) => setError(err.message))
@@ -24,6 +23,13 @@ useEffect(() => {
   return (
     <div>
         <h1>מתכונים</h1>
+      {loading && <p>טוען...</p>}
+      {error && <p>{error}</p>}
+
+    <ul>
+        {recipes.map((recipe) => (
+          <li key={recipe.id}>{recipe.name}</li>))}
+    </ul>
     </div>
   )
 }
