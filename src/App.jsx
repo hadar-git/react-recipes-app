@@ -3,7 +3,6 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 // ↓ כאן כל אחת מוסיפה את ה־import שלה ↓
-import RecipesCarouselPage from "./RecipesCarousel/RecipesCarouselPage";
 
 export default function App() {
   return (
@@ -11,7 +10,6 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         {/* ↓ כאן כל אחת מוסיפה את ה־Route שלה ↓ */}
-        <Route path="recipes-carousel" element={<RecipesCarouselPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
