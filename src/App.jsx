@@ -11,6 +11,10 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        {/* ↓ כאן כל אחת מוסיפה את ה־Route שלה ↓ */}
+      
+        <Route path="recipes" element={<RecipesList/>} />
+          <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
