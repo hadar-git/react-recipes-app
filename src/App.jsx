@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound";
 // ↓ כאן כל אחת מוסיפה את ה־import שלה ↓
 import About from "./pages/About";
 import RecipesList from "./pages/RecipesList";
+import RecipeDetails from "./pages/RecipeDetails";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         {/* ↓ כאן כל אחת מוסיפה את ה־Route שלה ↓ */}
         <Route path="about" element={<About />} />
         <Route path="recipes" element={<RecipesList />} />
+        <Route path="recipes/:id" element={<RecipeDetails />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
